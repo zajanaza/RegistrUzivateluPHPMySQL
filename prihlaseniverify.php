@@ -39,8 +39,8 @@
       echo "<a href='proRegistrovane.php'>Přihlášeno</a>";
       session_start();
       $_SESSION["username"]=$priJm;
-      //echo $_SESSION["username"];
-      session_destroy();
+      //echo $_SESSION["username"];      
+      echo menu();
     }
     else
     {

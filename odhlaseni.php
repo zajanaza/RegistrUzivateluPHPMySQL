@@ -10,6 +10,15 @@
   <?php
   include "menu.php";
   ?>
-  <div><?php echo menu() ?></div> 
+  <!-- <div><?php echo menu() ?></div> -->
+   <?php
+   session_start();
+   //echo $_SESSION["username"];
+   $_SESSION["username"] = "";
+   //echo $_SESSION["username"];
+   echo "Byl jste odhlášen";
+   echo "<div><br /><a href='prihlaseni.php'>Znovu přihlásit</a></div>";
+   echo menu();
+   ?>
 </body>
 </html>

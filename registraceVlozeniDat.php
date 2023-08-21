@@ -24,6 +24,9 @@ include "menu.php";
       addslashes($_POST["heslo"]) . "')"))
   {
     echo "Úspěšně vloženo.";
+    session_start();
+    $_SESSION["username"]=$_POST["prihl_jmeno"];
+    echo menu();
   }
   else
   {
