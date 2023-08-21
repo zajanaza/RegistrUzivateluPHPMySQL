@@ -10,5 +10,6 @@
   <?php
   include "menu.php";
   ?>
+  <div><?php echo menu() ?></div> 
 </body>
 </html>

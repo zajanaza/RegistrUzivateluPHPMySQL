@@ -15,7 +15,6 @@
       <li><a href='odhlaseni.php'>Odhlásit se</a></li>
     </ul>"     
   ;}
-  ?>
-  <div><?php echo menu() ?></div>  
+  ?>  
 </body>
 </html>

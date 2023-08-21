@@ -6,6 +6,9 @@
   <title>Document</title>
 </head>
 <body>
+  <?php
+  include "menu.php";
+  ?> 
   <form action="prihlaseniverify.php" method="POST">
     <div>
       <label for="login">Login: </label>
@@ -19,5 +22,6 @@
       <input type="submit" value="Příhlásit">
     </div>
   </form>
+  <div><?php echo menu() ?></div> 
 </body>
 </html>

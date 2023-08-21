@@ -31,5 +31,6 @@
       <input type="submit" value="Registrovat">
     </div>
   </form>  
+  <div><?php echo menu() ?></div> 
 </body>
 </html>

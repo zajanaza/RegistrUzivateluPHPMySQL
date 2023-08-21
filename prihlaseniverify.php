@@ -8,9 +8,10 @@
 <body>
   <?php
   include "dblogin.php";
+  include "menu.php";
   $priJm = addslashes($_POST["prihl_jmeno"]);
   $heslo = addslashes($_POST["heslo"]);
-  echo "$priJm"."$heslo";
+  //echo "$priJm"."$heslo";
   if (!($con = mysqli_connect($host,$user,$password,$db)))
   {
   die("Nelze se připojit k databázovému serveru!</body></html>");
@@ -26,19 +27,25 @@
   if($prihlaseni == 0)
   {
     echo "Špatné přihlašovací jméno";
+    echo menu(); 
   }
   else
   {
-    echo $prihlaseni["prihl_jmeno"];
-    echo $prihlaseni["heslo"];
-    echo $prihlaseni["jmeno"];  
+    //echo $prihlaseni["prihl_jmeno"];
+    //echo $prihlaseni["heslo"];
+    //echo $prihlaseni["jmeno"];  
     if($prihlaseni['prihl_jmeno'] == $priJm && $prihlaseni['heslo'] == $heslo) 
     {
-      echo "Přihlášeno";
+      echo "<a href='proRegistrovane.php'>Přihlášeno</a>";
+      session_start();
+      $_SESSION["username"]=$priJm;
+      //echo $_SESSION["username"];
+      session_destroy();
     }
     else
     {
       echo "Špatné heslo";
+      echo menu();
     };
   };     
   mysqli_free_result($vysledek);
