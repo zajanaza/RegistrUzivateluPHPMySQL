@@ -10,9 +10,9 @@
   function menu () {
     echo "
     <ul>
-      <li><a href='registrace.php'>Registrace</a></li>
-      <li><a href='proRegistrovane.php'>Pro registrované</a></li>
-      <li><a href='odhlaseni.php'>Odhlásit se</a></li>
+      <li><a href='registrace.php'>Registration</a></li>
+      <li><a href='proRegistrovane.php'>For registrated only</a></li>
+      <li><a href='odhlaseni.php'>Sign out</a></li>
     </ul>"     
   ;}
   ?>  

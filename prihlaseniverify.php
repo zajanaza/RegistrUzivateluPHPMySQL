@@ -14,7 +14,7 @@
   //echo "$priJm"."$heslo";
   if (!($con = mysqli_connect($host,$user,$password,$db)))
   {
-  die("Nelze se připojit k databázovému serveru!</body></html>");
+  die("Connection to DB server not posible!</body></html>");
   }
   mysqli_query($con,"SET NAMES 'utf8'");
   if (!($vysledek = mysqli_query($con, "SELECT jmeno, prihl_jmeno, heslo FROM uzivatele WHERE uzivatele.prihl_jmeno='$priJm'"
@@ -26,7 +26,7 @@
   $prihlaseni = mysqli_fetch_array($vysledek);
   if($prihlaseni == 0)
   {
-    echo "Špatné přihlašovací jméno";
+    echo "Incorrect login";
     echo menu(); 
   }
   else
@@ -36,7 +36,7 @@
     //echo $prihlaseni["jmeno"];  
     if($prihlaseni['prihl_jmeno'] == $priJm && $prihlaseni['heslo'] == $heslo) 
     {
-      echo "<a href='proRegistrovane.php'>Přihlášeno</a>";
+      echo "<a href='proRegistrovane.php'>You are logged in</a>";
       session_start();
       $_SESSION["username"]=$priJm;
       //echo $_SESSION["username"];      
@@ -44,7 +44,7 @@
     }
     else
     {
-      echo "Špatné heslo";
+      echo "Incorrect password";
       echo menu();
     };
   };     

@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>proRegistrovane</title>
+  <title>forRegistered</title>
 </head>
 <body>
   <?php
     include "menu.php";
     echo menu();
   ?>
-  <h1>Pro registrované</h1>
+  <h1>For registered only</h1>
   <?php
     session_start();
     if($_SESSION["username"] == "")
     {
-      die ("<a href='prihlaseni.php'>Prosím přihlašte se</a>");
+      die ("<a href='prihlaseni.php'>Please sign in</a>");
     }
     else{
-      echo "Jste přihlášeni";
+      echo "You are logged in";
     }
   ?>  
 </body>

@@ -13,7 +13,7 @@ include "menu.php";
 <?php
   if (!($con = mysqli_connect($host,$user,$password,$db)))
   {
-    die("Nelze se připojit k databázovému serveru!</body></html>");
+    die("Connection to DB server not possible!</body></html>");
   }
   mysqli_query($con,"SET NAMES 'utf8'");
   if (mysqli_query($con,
@@ -23,14 +23,14 @@ include "menu.php";
       addslashes($_POST["prihl_jmeno"]) . "', '" .
       addslashes($_POST["heslo"]) . "')"))
   {
-    echo "Úspěšně vloženo.";
+    echo "Successcully added";
     session_start();
     $_SESSION["username"]=$_POST["prihl_jmeno"];
     echo menu();
   }
   else
   {
-    echo "Nelze provést dotaz. " . mysqli_error($con);
+    echo "Not possible to process! " . mysqli_error($con);
   }
   mysqli_close($con); 
 ?>

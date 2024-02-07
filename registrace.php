@@ -6,17 +6,17 @@
   <title>registrace</title>
 </head>
 <body>
-  <h1>Registrace</h1>
+  <h1>Registration</h1>
   <?php
   include "menu.php";  
   ?>
   <form action="registraceVlozeniDat.php" method="POST">
     <div>
-      <label for="input1">Jméno: </label>
+      <label for="input1">Name: </label>
       <input id="input1" type="text" name="jmeno">
     </div>
     <div>
-      <label for="input2">Příjmení:  </label>
+      <label for="input2">Surname:  </label>
       <input id="input2" type="text" name="prijmeni">
     </div>
     <div>
@@ -24,11 +24,11 @@
       <input id="input3" type="text" name="prihl_jmeno">
     </div>
     <div>
-      <label for="input4">Heslo: </label>
+      <label for="input4">Password: </label>
       <input id="input4" type="password" name="heslo">
     </div>
     <div>
-      <input type="submit" value="Registrovat">
+      <input type="submit" value="Register">
     </div>
   </form>  
   <div><?php echo menu() ?></div> 

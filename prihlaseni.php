@@ -15,11 +15,11 @@
       <input type="text" name="prihl_jmeno">
     </div>
     <div>
-      <label for="heslo">Heslo: </label>
+      <label for="heslo">Password: </label>
       <input type="password" name="heslo">
     </div>
     <div>
-      <input type="submit" value="Příhlásit">
+      <input type="submit" value="Sign in">
     </div>
   </form>
   <div><?php echo menu() ?></div> 

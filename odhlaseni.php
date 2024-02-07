@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>odhlaseni</title>
+  <title>Sign out</title>
 </head>
 <body>
-  <h1>Odhlášení</h1>
+  <h1>Sign out</h1>
   <?php
   include "menu.php";
   ?>
@@ -16,8 +16,8 @@
    //echo $_SESSION["username"];
    $_SESSION["username"] = "";
    //echo $_SESSION["username"];
-   echo "Byl jste odhlášen";
-   echo "<div><br /><a href='prihlaseni.php'>Znovu přihlásit</a></div>";
+   echo "You have been signed out.";
+   echo "<div><br /><a href='prihlaseni.php'>Login again</a></div>";
    echo menu();
    ?>
 </body>
